@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.jumbotron {
+    width: 100%;
+    height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    .jumbotron-child {
+      width: 80%;
+      height: 100%;
+      margin: auto;
+  
+      ul {
+        display: flex;
+        color: #fff;
+        list-style-type: none;
+        padding: 15px 0;
+  
+        .brand {
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 6px;
+  
+          h1 {
+            padding: 13px 0 0 30px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+        }
+  
+        .sign-in {
+          display: flex;
+          justify-content: flex-end;
+          width: 30%;
+          padding-top: 9px;
+  
+          h1 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding: 5px 15px 0 0;
+          }
+  
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+  
+          img {
+            margin: 0 0 0 5px;
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+  
+      .featured-text {
+        padding-top: 70px;
+        width: 55%;
+        color: #fff;
+  
+        h1 {
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 56px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #fff;
+        }
+  
+        .rating {
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+          margin-top: 2%;
+
+          .imdb{
+            width: 100%;
+            height: auto;
+          }
+        }
+        p{
+          padding-top: 15px;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 0em;
+          text-align: left;
+          font-family: DM Sans;
+        }
+      }
+  
+      .featured-button {
+        display: flex;
+        justify-content: center;
+        border-radius: 6px;
+        gap: 8px;
+        background: #BE123C;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #FFFFFF;
+        width: 180px;
+        padding: 10px 10px 10px 15px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-left: -15px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+  
+  .featured-movies {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 3%;
+  
+    .directory {
+      display: flex;
+  
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        width: 70%;
+      }
+  
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: right;
+        width: 30%;
+        color: #be123c;
+      }
+    }
+  }
+  
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 50px;
+  }
+  
+@media (max-width: 768px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 50px;
+  }
+    .jumbotron {
+        height: 500px;
+        .jumbotron-child {
+          ul {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            list-style-type: none;
+            padding: 15px 0;
+      
+            .brand {
+                
+                img{
+                    width: 30%;
+                    height: 80%;
+                    margin-top: 7px;
+                }
+              h1 {
+                padding: 12px 0 0 8px;
+                font-size: 10px;
+              }
+            }
+      
+            .sign-in {
+      
+              h1 {
+                font-size: 8px;
+                padding: 5px 10px 0 0;
+              }
+    
+      
+              img {
+                margin: 7px 0 0 3px;
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+      
+          .featured-text {
+            padding-top: 40px;
+      
+            h1 {
+              font-size: 38px;
+              line-height: 46px;
+            }
+      
+            .rating {
+              display: flex;
+              justify-content: space-between;
+              width: 60%;
+              margin-top: 2%;
+
+              .tomato{
+                margin-left: 15px;
+               }
+            }
+
+      
+            p {
+              padding-top: 15px;
+              font-size: 5px;
+              font-weight: 500;
+              line-height: 8px;
+            
+            }
+          }
+          .featured-button {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+            width: 150px;
+            padding: 5px 5px 5px 7px;
+    
+            img {
+              width: 20px;
+              height: 20px;
+              margin-left: -15px;
+              margin-top: 2px;
+            }
+          }
+      }
+      
+      .featured-movies {
+      
+        .directory {
+          h2 {
+            font-size: 18px;
+          }
+      
+          a {
+            font-size: 17px;
+          }
+        }
+      }
+      
+      .products-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 50px;
+      }
+  
+  }}
+
+// @media only (min-width: 992px) {
+
+// }
+
+
+// @media only screen and (min-width: 1200px) {
+
+// }
+  

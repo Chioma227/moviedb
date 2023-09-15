@@ -1,0 +1,67 @@
+.input-box{
+    margin-bottom: 5px;
+}
+.search-box {
+    width: 525px;
+    line-height: 20px;
+    margin: 5px 0 0 260px;
+    background: transparent;
+    height: 43px;
+    padding: 6px 10px 8px 10px;
+    border-radius: 8px;
+    border: 2px solid #D1D5DB;
+    color: #D1D5DB;
+
+}
+
+.search-box :focus{
+    border: 2px solid #fff;
+}
+
+::placeholder {
+    color: #ffffffe3;
+    opacity: 0.9;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.input-box i{
+    position: absolute;
+}
+
+.icon{
+    padding: 10px;
+    color: #fff;
+    min-width: 50px;
+    text-align: center;
+    right: 543px;
+    margin: 8px 0 1px 0;
+}
+
+@media (max-width: 768px) {
+    .input-box{
+        .search-box {
+            width: 100px;
+            line-height: 20px;
+            margin: 18px 0 0 6px;
+            height: 20px;
+            padding: 2px 6px;
+            border-radius: 8px;
+        }
+        
+        ::placeholder { 
+            color: #ffffffe3;
+            opacity: 0.8;
+            font-size: 5px;
+        }
+        .icon{
+            display: none;
+        }
+    }
+  }
+
