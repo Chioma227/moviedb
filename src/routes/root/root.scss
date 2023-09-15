@@ -136,6 +136,7 @@
   
     .directory {
       display: flex;
+     
   
       h2 {
         font-size: 36px;
@@ -168,6 +169,9 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 50px;
+  }
+  .directory > h2{
+      font-size: 25px;
   }
     .jumbotron {
         height: 500px;

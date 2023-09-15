@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
+import "./root.scss";
 import CardComponent from "../../components/card-component/card-component";
 import SearchBox from "../../components/search-box/search-box";
 import { getMovies } from "../../components/helper";
-
-import "./root.scss";
 import Brand from "../../assets/tv.png";
-import Hamburger from "../../assets/Menu.png";
 import Rating from "../../assets/Rating.png";
 import Play from "../../assets/Icon.png";
 import { useLoaderData } from "react-router-dom";
 
-// eslint-disable-next-line react-refresh/only-export-components
+
 export async function loader() {
+
+  
   let movies = await getMovies();
 
   return { movies };
@@ -19,7 +19,9 @@ export async function loader() {
 
 export default function Root() {
   const { movies } = useLoaderData();
+
   const [searchField, setSearchField] = useState("");
+  
   movies.sort((a, b) => {
     if (a.popularity < b.popularity) return -1;
     if (a.popularity > b.popularity) return 1;
@@ -30,13 +32,13 @@ export default function Root() {
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
+   
   };
 
   useEffect(() => {
     const newFilteredMovies = movies.filter((movie) => {
       return movie.title.toLowerCase().includes(searchField);
     });
-
     setFilteredMovies(newFilteredMovies);
   }, [movies, searchField]);
 
@@ -57,7 +59,6 @@ export default function Root() {
                 <img src={Brand} alt="brand" />
                 <h1> MovieBox</h1>
               </li>
-
               <li>
                 <SearchBox
                   onSearchChange={onSearchChange}
